@@ -1,0 +1,20 @@
+{
+  "name": "moralis-upgradeable-smart-contracts",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "author": "Yoseph Kurnia Soenggoro",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.1",
+    "@openzeppelin/contracts-upgradeable": "^4.4.1",
+    "@openzeppelin/truffle-upgrades": "^1.11.0",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "truffle-plugin-verify": "^0.5.20"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "console": "truffle console",
+    "verify": "truffle run verify"
+  }
+}

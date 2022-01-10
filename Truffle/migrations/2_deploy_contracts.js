@@ -1,8 +1,14 @@
-const ConvertLib = artifacts.require("ConvertLib");
-const MetaCoin = artifacts.require("MetaCoin");
+const { deployProxy } = require("@openzeppelin/truffle-upgrades");
+const ERC721CustomUpgradeable = artifacts.require("ERC721CustomUpgradeable");
 
-module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+module.exports = async (deployer) => {
+  const instance = await deployProxy(
+    ERC721CustomUpgradeable,
+    ["My Token", "MTK"],
+    {
+      deployer,
+      kind: "uups",
+    }
+  );
+  console.log("Deployed", instance.address);
 };
