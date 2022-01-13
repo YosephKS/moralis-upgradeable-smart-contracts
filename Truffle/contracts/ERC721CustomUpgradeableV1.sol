@@ -5,12 +5,14 @@ import "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import "./interfaces/IERC721CustomUpgradeable.sol";
 
 contract ERC721CustomUpgradeable is
     Initializable,
     ERC721Upgradeable,
     OwnableUpgradeable,
-    UUPSUpgradeable
+    UUPSUpgradeable,
+    IERC721CustomUpgradeable
 {
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() initializer {}
@@ -29,4 +31,8 @@ contract ERC721CustomUpgradeable is
         override
         onlyOwner
     {}
+
+    function safeMint(address to, uint256 tokenId) public {
+        _safeMint(to, tokenId, "");
+    }
 }
