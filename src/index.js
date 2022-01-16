@@ -1,9 +1,9 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { MoralisProvider } from "react-moralis";
 import "./index.css";
-import QuickStart from "components/QuickStart";
+import QuickStart from "components/Home";
 
 /** Get your free Moralis Account https://moralis.io/ */
 
@@ -13,25 +13,26 @@ const SERVER_URL = process.env.REACT_APP_MORALIS_SERVER_URL;
 const Application = () => {
   const isServerInfo = APP_ID && SERVER_URL ? true : false;
   //Validate
-  if(!APP_ID || !SERVER_URL) throw new Error("Missing Moralis Application ID or Server URL. Make sure to set your .env file.");
-  if (isServerInfo)
-    return (
-      <MoralisProvider appId={APP_ID} serverUrl={SERVER_URL}>
-        <App isServerInfo />
-      </MoralisProvider>
-    );
-  else {
-    return (
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <QuickStart />
-      </div>
+  if (!APP_ID || !SERVER_URL) {
+    throw new Error(
+      "Missing Moralis Application ID or Server URL. Make sure to set your .env file."
     );
   }
+
+  return isServerInfo ? (
+    <MoralisProvider appId={APP_ID} serverUrl={SERVER_URL}>
+      <App />
+    </MoralisProvider>
+  ) : (
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <QuickStart />
+    </div>
+  );
 };
 
 ReactDOM.render(
-  // <React.StrictMode>
-  <Application />,
-  // </React.StrictMode>,
+  <StrictMode>
+    <Application />,
+  </StrictMode>,
   document.getElementById("root")
 );
