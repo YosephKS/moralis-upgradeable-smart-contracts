@@ -5,15 +5,17 @@
   "author": "Yoseph Kurnia Soenggoro",
   "license": "MIT",
   "dependencies": {
-    "@openzeppelin/contracts-upgradeable": "^4.4.1",
-    "@openzeppelin/truffle-upgrades": "^1.11.0",
+    "@openzeppelin/contracts-upgradeable": "^4.4.2",
+    "@openzeppelin/truffle-upgrades": "^1.12.0",
     "@truffle/hdwallet-provider": "^2.0.0",
     "truffle-plugin-verify": "^0.5.20"
   },
   "scripts": {
-    "compile": "truffle compile",
+    "compile": "truffle compile --all",
     "migrate": "truffle migrate",
+    "develop": "truffle develop",
     "console": "truffle console",
-    "verify": "truffle run verify"
+    "verify": "truffle run verify",
+    "version": "truffle version"
   }
 }
