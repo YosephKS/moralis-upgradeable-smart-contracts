@@ -1,0 +1,308 @@
+{
+  "contractName": "INFTMinterUpgradeable",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftToken",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mintNFT",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftToken\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mintNFT\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/INFTMinterUpgradeable.sol\":\"INFTMinterUpgradeable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/INFTMinterUpgradeable.sol\":{\"keccak256\":\"0xba4c4ecdd22045b64cfaed03b658522d27b10ad608c272f88d86cf477dda6de5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ae8933066a1a6d77d51727c8d374459b1c1bb18cb3ec524cd6c137a59ca1789d\",\"dweb:/ipfs/QmZAqfBZrP7GiguTWDSa9wFY8PnmUgDzTJv9FQWgiefCjB\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.11;\n\ninterface INFTMinterUpgradeable {\n    function initialize(address _nftToken) external;\n\n    function mintNFT() external;\n}\n",
+  "sourcePath": "/home/yosephkurniasoenggoro/Documents/GitHub/moralis-upgradeable-smart-contracts/Truffle/contracts/interfaces/INFTMinterUpgradeable.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/INFTMinterUpgradeable.sol",
+    "exportedSymbols": {
+      "INFTMinterUpgradeable": [
+        2768
+      ]
+    },
+    "id": 2769,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2759,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:21"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "INFTMinterUpgradeable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2768,
+        "linearizedBaseContracts": [
+          2768
+        ],
+        "name": "INFTMinterUpgradeable",
+        "nameLocation": "69:21:21",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "c4d66de8",
+            "id": 2764,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nameLocation": "106:10:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2762,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2761,
+                  "mutability": "mutable",
+                  "name": "_nftToken",
+                  "nameLocation": "125:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2764,
+                  "src": "117:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2760,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "117:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "116:19:21"
+            },
+            "returnParameters": {
+              "id": 2763,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "144:0:21"
+            },
+            "scope": 2768,
+            "src": "97:48:21",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "14f710fe",
+            "id": 2767,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintNFT",
+            "nameLocation": "160:7:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2765,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "167:2:21"
+            },
+            "returnParameters": {
+              "id": 2766,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "178:0:21"
+            },
+            "scope": 2768,
+            "src": "151:28:21",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2769,
+        "src": "59:122:21",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:149:21"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/INFTMinterUpgradeable.sol",
+    "exportedSymbols": {
+      "INFTMinterUpgradeable": [
+        2768
+      ]
+    },
+    "id": 2769,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2759,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:21"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "INFTMinterUpgradeable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2768,
+        "linearizedBaseContracts": [
+          2768
+        ],
+        "name": "INFTMinterUpgradeable",
+        "nameLocation": "69:21:21",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "c4d66de8",
+            "id": 2764,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nameLocation": "106:10:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2762,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2761,
+                  "mutability": "mutable",
+                  "name": "_nftToken",
+                  "nameLocation": "125:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2764,
+                  "src": "117:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2760,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "117:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "116:19:21"
+            },
+            "returnParameters": {
+              "id": 2763,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "144:0:21"
+            },
+            "scope": 2768,
+            "src": "97:48:21",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "14f710fe",
+            "id": 2767,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintNFT",
+            "nameLocation": "160:7:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2765,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "167:2:21"
+            },
+            "returnParameters": {
+              "id": 2766,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "178:0:21"
+            },
+            "scope": 2768,
+            "src": "151:28:21",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2769,
+        "src": "59:122:21",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:149:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-01-18T18:32:59.986Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
