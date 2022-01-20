@@ -11,11 +11,10 @@ contract ERC1155CustomUpgradeableV2 is
     ERC1155Upgradeable,
     UUPSUpgradeable
 {
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() initializer {}
-
     function initialize() public initializer {
-        __ERC1155_init("");
+        __ERC1155_init(
+            "https://ipfs.moralis.io:2053/ipfs/QmRsFtxBbdm88dGmp2abYVukiT4Qdoi1G3q31KYBoWD9Lr/metadata/{id}.json"
+        );
         __UUPSUpgradeable_init();
     }
 
@@ -26,10 +25,9 @@ contract ERC1155CustomUpgradeableV2 is
     function mint(
         address account,
         uint256 id,
-        uint256 amount,
-        bytes memory data
+        uint256 amount
     ) public {
-        _mint(account, id, amount * 2, data);
+        _mint(account, id, amount * 2, "");
     }
 
     function mintBatch(

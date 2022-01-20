@@ -8,20 +8,13 @@ import {
 } from "react-router-dom";
 import Account from "components/Account/Account";
 import Chains from "components/Chains";
-import TokenPrice from "components/TokenPrice";
-import ERC20Balance from "components/ERC20Balance";
-import ERC20Transfers from "components/ERC20Transfers";
-import DEX from "components/DEX";
 import NFTBalance from "components/NFTBalance";
-import Wallet from "components/Wallet";
-import { Layout, Tabs } from "antd";
+import { Layout } from "antd";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
 import Home from "components/Home";
-import Contract from "components/Contract/Contract";
 import Text from "antd/lib/typography/Text";
-import Ramper from "components/Ramper";
 import MenuItems from "./components/MenuItems";
 const { Header, Footer } = Layout;
 
@@ -74,12 +67,6 @@ const App = () => {
           <MenuItems />
           <div style={styles.headerRight}>
             <Chains />
-            <TokenPrice
-              address="0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
-              chain="eth"
-              image="https://cloudflare-ipfs.com/ipfs/QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg/"
-              size="40px"
-            />
             <NativeBalance />
             <Account />
           </div>
@@ -87,45 +74,17 @@ const App = () => {
 
         <div style={styles.content}>
           <Switch>
-            <Route exact path="/quickstart">
+            <Route exact path="/home">
               <Home />
-            </Route>
-            <Route path="/wallet">
-              <Wallet />
-            </Route>
-            <Route path="/1inch">
-              <Tabs defaultActiveKey="1" style={{ alignItems: "center" }}>
-                <Tabs.TabPane tab={<span>Ethereum</span>} key="1">
-                  <DEX chain="eth" />
-                </Tabs.TabPane>
-                <Tabs.TabPane tab={<span>Binance Smart Chain</span>} key="2">
-                  <DEX chain="bsc" />
-                </Tabs.TabPane>
-                <Tabs.TabPane tab={<span>Polygon</span>} key="3">
-                  <DEX chain="polygon" />
-                </Tabs.TabPane>
-              </Tabs>
-            </Route>
-            <Route path="/erc20balance">
-              <ERC20Balance />
-            </Route>
-            <Route path="/onramp">
-              <Ramper />
-            </Route>
-            <Route path="/erc20transfers">
-              <ERC20Transfers />
             </Route>
             <Route path="/nftBalance">
               <NFTBalance />
             </Route>
-            <Route path="/contract">
-              <Contract />
-            </Route>
             <Route path="/">
-              <Redirect to="/quickstart" />
+              <Redirect to="/home" />
             </Route>
             <Route path="/ethereum-boilerplate">
-              <Redirect to="/quickstart" />
+              <Redirect to="/home" />
             </Route>
             <Route path="/nonauthenticated">
               <>Please login using the "Authenticate" button</>

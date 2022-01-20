@@ -14,6 +14,7 @@ module.exports = {
     ftmscan: process.env.FTMSCAN_API_KEY,
     snowtrace: process.env.SNOWTRACE_API_KEY,
   },
+  contracts_build_directory: "../src/contracts",
   networks: {
     develop: {
       host: "127.0.0.1",

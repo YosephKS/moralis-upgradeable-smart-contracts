@@ -8,6 +8,7 @@
     "@openzeppelin/contracts-upgradeable": "^4.4.2",
     "@openzeppelin/truffle-upgrades": "^1.12.0",
     "@truffle/hdwallet-provider": "^2.0.0",
+    "chai": "^4.3.4",
     "truffle-plugin-verify": "^0.5.20"
   },
   "scripts": {
@@ -16,6 +17,6 @@
     "develop": "truffle develop",
     "console": "truffle console",
     "verify": "truffle run verify",
-    "version": "truffle version"
+    "test": "truffle test"
   }
 }
