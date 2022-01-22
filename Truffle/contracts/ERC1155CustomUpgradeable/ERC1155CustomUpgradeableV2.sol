@@ -8,6 +8,7 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 contract ERC1155CustomUpgradeableV2 is
     Initializable,
+    OwnableUpgradeable,
     ERC1155Upgradeable,
     UUPSUpgradeable
 {
@@ -15,6 +16,7 @@ contract ERC1155CustomUpgradeableV2 is
         __ERC1155_init(
             "https://ipfs.moralis.io:2053/ipfs/QmRsFtxBbdm88dGmp2abYVukiT4Qdoi1G3q31KYBoWD9Lr/metadata/{id}.json"
         );
+        __Ownable_init();
         __UUPSUpgradeable_init();
     }
 
@@ -39,5 +41,5 @@ contract ERC1155CustomUpgradeableV2 is
         _mintBatch(to, ids, amounts, data);
     }
 
-    function _authorizeUpgrade(address newImplementation) internal override {}
+    function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
 }
